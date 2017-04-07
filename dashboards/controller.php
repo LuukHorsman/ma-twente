@@ -1,6 +1,6 @@
 <?php
-// if(!isset($url[1]))
-
+if(!isset($url[1]))
+	$url[1] = '';
 
 switch($url[1]) {
 	case '':

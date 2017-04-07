@@ -1,5 +1,5 @@
 <?php
-
+//hey Mark
 	$url[0] = '';
 	if(isset($_GET['url']) && $_GET['url']!='')
 	$url = explode('/',$_GET['url']);
