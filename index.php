@@ -7,14 +7,20 @@
 	include('dbhandler.php');
 	include('db_connection.php');
 
-
 	switch($url[0]) {
 		case '':
-			include('login_function.php');
-			$page = 'login.php';
+			include('/login/includes/login_function.php');
+			$page = '/login/login.php';
 		break;
-		case '':
+		case 'dashboard':
+			session_start();
 
+			include('/dashboards/includes/checkSession.php');
+			include('/dashboards/controller.php');
+
+		break;
+		case 'logout':
+			$page = 'logout.php';
 		break;
 		default:
 		$page = '404.php';

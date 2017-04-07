@@ -1,3 +1,3 @@
 <?php
 
-$login = new DbHandler("localhost", "product", "root", "");
+$login = new DbHandler("localhost", "matwente", "root", "");
