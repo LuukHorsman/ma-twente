@@ -7,11 +7,11 @@
 			<form method="post">
 				<label class="login_label">
 					Username:
-					<input class="login_input" type="text" name="username" id="username" placeholder="Username">
+					<input value="<?= (isset($_POST['username']) ? $_POST['username'] : '') ?>" class="login_input" type="text" name="username" id="username" placeholder="Username">
 				</label>
 				<label>
 					Password:
-					<input class="login_input" type="password" name="password" id="password" placeholder="Password">
+					<input value="<?= (isset($_POST['password']) ? $_POST['password'] : '') ?>" class="login_input" type="password" name="password" id="password" placeholder="Password">
 				</label>
 				<label>
 					<input type="submit" name="login" value="login">
