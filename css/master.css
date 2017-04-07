@@ -4,45 +4,63 @@
 
 	AUTHOR: Mark Brouwer, Luuk Horsman
 
+	LEGEND:
+			- GLOBAL STYLES
+			- MEDEWERKER LOGIN
+			- MEDEWERKER DASHBOARD
+
 */
 
-body { background-color: #f1f1f1; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
-body, section, header, article, main, footer, form, input, a, h1 {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		padding: 0;
-		margin: 0;
-		font-weight: normal;
-}
+/* GLOBAL STYLES */
+		body { background-color: #f1f1f1; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
+		body, section, header, article, main, footer, form, input, a, h1 {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+				font-weight: normal;
+		}
 
-article.login {
-		background-color: #FFF;
-		box-shadow: 0 1px 2px rgba(0,0,0,.1);
-		width: 40%;
-		max-width: 450px;
-		min-width: 300px;
-		margin: 0 auto;
-		margin-top: 10%;
-		padding: 10px;
-		color: #747474;
-		border-top: 4px solid #00999D;
-}
+/* MEDEWERKER LOGIN */
+		article.login {
+				background-color: #FFF;
+				box-shadow: 0 1px 2px rgba(0,0,0,.1);
+				width: 40%;
+				max-width: 450px;
+				min-width: 300px;
+				margin: 0 auto;
+				margin-top: 10%;
+				padding: 10px;
+				color: #747474;
+				border-top: 4px solid #00999D;
+		}
 
-article.login form input {
-		width: 100%;
-		margin-top: 20px;
-		padding: 10px;
-		border-radius: 3px;
-		border: none;
-		background-color: #e3e3da;
-}
+		article.login form input {
+				width: 100%;
+				margin-top: 20px;
+				padding: 10px;
+				border-radius: 3px;
+				border: none;
+				background-color: #e3e3da;
+		}
 
-article.login form input[type="submit"] {
-		border: 1px solid #ccc;
-		background-color: #fafafa;
-		text-transform: uppercase;
-		font-weight: bold;
-		color: #FFF;
-		background-color: #00999D;
-}
+		article.login form input[type="submit"] {
+				border: 1px solid #ccc;
+				background-color: #fafafa;
+				text-transform: uppercase;
+				font-weight: bold;
+				color: #FFF;
+				background-color: #00999D;
+		}
+
+		article.login footer {height: 20px; margin-top: 10px;}
+
+/* MEDEWERKER DASHBOARD */
+		section.dashboard {font-size: 90%;}
+		section.dashboard header {
+				padding: 20px;
+				background-color: #FFF;
+				box-shadow: 0 1px 2px rgba(0,0,0,.1);
+		}
+	

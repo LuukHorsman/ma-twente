@@ -17,19 +17,7 @@
 					</form>
 			</main>
 			<footer class="login_footer">
-<<<<<<< HEAD
-			<?php
-			if(isset($_POST['login'])) {
-				echo (isset($error['username']) && $error['username']) ? 'Gebruikersnaam niet ingevuld. <br>' : '';
-				echo (isset($error['password']) && $error['password']) ? 'Wachtwoord niet ingevuld.' : '';
-				echo (isset($error['wrong']) && $error['wrong']) ? 'Geen gebruikers gevonden.' : '';
-			}
-			?>
-				
-			
-=======
-
->>>>>>> 75cb534cade3ff4053b84497f3f2980ce7b696f0
+					
 			</footer>
 	</article>
 </section>
