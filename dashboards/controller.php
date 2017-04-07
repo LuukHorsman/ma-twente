@@ -10,4 +10,6 @@ switch($url[1]) {
 		include('includes/checkForm.php');
 		$page = '/dashboards/createUser.php';
 	break;
+	default:
+		$page = '404.php';
 }
