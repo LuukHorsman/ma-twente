@@ -1,7 +1,7 @@
 <?php
 
 	$url[0] = '';
-	if(isset($_GET['url']) && $_GET['url']!='')
+	if(isset($_GET['url']) && $_GET['url'] != '')
 	$url = explode('/',$_GET['url']);
 
 	include('dbhandler.php');
