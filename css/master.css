@@ -12,14 +12,15 @@
 */
 
 /* GLOBAL STYLES */
-		body { background-color: #f1f1f1; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
-		body, section, header, article, main, footer, form, input, a, h1 {
+		body { background-color: #f1f3f6; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
+		body, section, header, article, main, footer, form, input, a, div, h1 {
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
 				padding: 0;
 				margin: 0;
 				font-weight: normal;
+				position: relative;
 		}
 
 /* MEDEWERKER LOGIN */
@@ -57,9 +58,55 @@
 		article.login footer {height: 20px; margin-top: 10px;}
 
 /* MEDEWERKER DASHBOARD */
-		section.dashboard {font-size: 90%;}
-		section.dashboard header {
-				padding: 20px;
+
+		section.dashboard header {width: 100%; position: fixed; background: #FFF; border-bottom: 1px solid #eaeaea;  z-index: 9999;}
+		section.dashboard header div.nav-trigger {
+				background: #f7f9fa;
+				padding: 10px;
+				border-right: 1px solid #eaeaea;
+				float: left;
+				padding-left: 12px;
+		    padding-right: 12px;
+				color: #34495e;
+				text-align: center;
+		}
+		section.dashboard header div.nav-trigger:hover {
+				cursor: pointer;
+				background-color: #f2f5f7;
+		}
+
+		section.dashboard nav {
+				background: #fff;
+				width: 70%;
+				position: fixed;
+				top: 49px;
+				border-right: 1px solid #eaeaea;
+				height: 100%;
+				min-width: 225px;
+				max-width: 270px;
+
+		}
+
+		section.dashboard nav a {
+				text-decoration: none;
+				font-size: 13.5px;
+				font-weight: bold;
+				color: #6a6c6f;
+				font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+		}
+
+		section.dashboard nav ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+		}
+
+		section.dashboard nav li {
+				padding: 15px;
+				border-bottom: 1px solid #eaeaea;
+				background-color: #F7F9FA;
+		}
+
+		section.dashboard nav li:hover {
 				background-color: #FFF;
-				box-shadow: 0 1px 2px rgba(0,0,0,.1);
 		}
