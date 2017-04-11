@@ -6,10 +6,10 @@
 			<main class="login_main">
 					<form method="post">
 							<label class="login_label">
-								<input class="login_input" type="text" name="username" id="username" placeholder="E-mail">
+								<input value="<?= (isset($_POST['username']) ? $_POST['username'] : '') ?>" class="login_input" type="text" name="username" id="username" placeholder="E-mail">
 							</label>
 							<label>
-								<input class="login_input" type="password" name="password" id="password" placeholder="Wachtwoord">
+								<input value="<?= (isset($_POST['password']) ? $_POST['password'] : '') ?>" class="login_input" type="password" name="password" id="password" placeholder="Wachtwoord">
 							</label>
 							<label>
 								<input type="submit" name="login" value="Inloggen">

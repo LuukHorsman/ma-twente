@@ -1,5 +1,5 @@
 <?php
-//hey Mark
+
 	$url[0] = '';
 	if(isset($_GET['url']) && $_GET['url']!='')
 	$url = explode('/',$_GET['url']);
@@ -14,10 +14,9 @@
 		break;
 		case 'dashboard':
 			session_start();
-
 			include('/dashboards/includes/checkSession.php');
-			include('/dashboards/controller.php');
-
+			include('/controllers/dashboard_controller.php');
+			
 		break;
 		case 'logout':
 			$page = 'logout.php';
