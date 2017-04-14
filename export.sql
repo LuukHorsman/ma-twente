@@ -240,4 +240,3 @@ INSERT INTO matwente.computer (medewerkers_id, aanschaf_datum, computer_type_id,
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-ß

@@ -55,11 +55,6 @@
 				<input class="<?= (isset($error['match']['email']) ? ERROR_NAME : '') ?>" value="<?= $results[0]['email'] ?>" type="text" name="email">
 		</div>
 
-		<div class="form-label">Wachtwoord*</div>
-		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['wachtwoord']) ? ERROR_NAME : '') ?>" value="" type="password" placeholder="please fill in your password again" name="wachtwoord">
-		</div>
-
 		<input type="radio" name="status_id" value="1" checked>Administrator<br><br>
 		<input type="submit" name="subbutton" value="Gebruiker Updaten">
 	</form>

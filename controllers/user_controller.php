@@ -18,6 +18,7 @@ switch($url[2]) {
 		$user_page = '/../userFiles/updateUser.php';
 	break;
 	case 'delete':
+		include('dashboards/user_includes/deleteForm.php');
 		$user_page = '/../userFiles/deleteUser.php';
 	break;
 	default:

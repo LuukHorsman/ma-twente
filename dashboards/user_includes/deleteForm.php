@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($url[3]) || $url[3] == '') {
-  header('location: /dashboard/user/update/1');
+  header('location: /dashboard/user/delete/1');
 }
 
 $results = $login->ReadData(['selectQuery' => '
@@ -38,27 +38,6 @@ $results = $login->ReadData(['selectQuery' => '
   WHERE gebruikersccount.id = ' . $url[3] . '
   ']);
 
-if(is_array($results) && empty($results)) {
-  die('User does not exist');
-}
+  if(isset($_POST['deleteButton'])) {
 
-if(isset($_POST) && !empty($_POST) && is_array($error) && empty($error)) {
-  $query = 'UPDATE gebruikersccount SET
-    email = "' . $cleanArray['email'] . '"
-    WHERE id = ' . $results[0]['gebruikersaccount_id'] . '
-  ';
-  $secondQuery = 'UPDATE medewerkers SET
-    voornaam = "' . $cleanArray['voornaam'] . '",
-    tussenvoegsel = "' . $cleanArray['tussenvoegsel'] . '",
-    achternaam = "' . $cleanArray['achternaam'] . '",
-    inter_telefoonnummer = ' . $cleanArray['inter_telefoonnummer'] . ',
-    geslacht_id = ' . $cleanArray['geslacht'] . ',
-    afdeling_id = ' . $cleanArray['afdeling_id'] . '
-    WHERE id = "' . $results[0]['medewerkers_id'] . '"
-  ';
-
-  $login->UpdateData($query);
-  $login->UpdateData($secondQuery);
-
-  header('location:/dashboard/user');
-}
+  }
