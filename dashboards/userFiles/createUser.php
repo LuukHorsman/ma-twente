@@ -18,27 +18,27 @@
 
 		<div class="form-label">Voornaam*</div>
 		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['voornaam']) ? 'createError' : '') ?>" value="<?= (isset($_POST['voornaam']) ? $_POST['voornaam'] : '') ?>" type="text" name="voornaam">
+				<input class="<?= (isset($error['match']['voornaam']) ? ERROR_NAME : '') ?>" value="<?= (isset($_POST['voornaam']) ? $_POST['voornaam'] : '') ?>" type="text" name="voornaam">
 		</div>
 
 		<div class="form-label">Tussenvoegsel</div>
 		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['tussenvoegsel']) ? 'createError' : '') ?>" value="<?= (isset($_POST['tussenvoegsel']) ? $_POST['tussenvoegsel'] : '') ?>" type="text" name="tussenvoegsel">
+				<input class="<?= (isset($error['match']['tussenvoegsel']) ? ERROR_NAME : '') ?>" value="<?= (isset($_POST['tussenvoegsel']) ? $_POST['tussenvoegsel'] : '') ?>" type="text" name="tussenvoegsel">
 		</div>
 
 		<div class="form-label">Achternaam*</div>
 		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['achternaam']) ? 'createError' : '') ?>" value="<?= (isset($_POST['achternaam']) ? $_POST['achternaam'] : '') ?>" type="text" name="achternaam">
+				<input class="<?= (isset($error['match']['achternaam']) ? ERROR_NAME : '') ?>" value="<?= (isset($_POST['achternaam']) ? $_POST['achternaam'] : '') ?>" type="text" name="achternaam">
 		</div>
 
 		<div class="form-label">Intern telefoonnummer*</div>
 		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['inter_telefoonnummer']) ? 'createError' : '') ?>" value="<?= (isset($_POST['inter_telefoonnummer']) ? $_POST['inter_telefoonnummer'] : '') ?>" type="text" name="inter_telefoonnummer">
+				<input class="<?= (isset($error['match']['inter_telefoonnummer']) ? ERROR_NAME : '') ?>" value="<?= (isset($_POST['inter_telefoonnummer']) ? $_POST['inter_telefoonnummer'] : '') ?>" type="text" name="inter_telefoonnummer">
 		</div>
 
 		<div class="form-label">Afdeling*</div>
 		<div class="form-attribute">
-				<select class="<?= (isset($error['match']['afdeling_id']) ? 'createError' : '') ?>" name="afdeling_id">
+				<select class="<?= (isset($error['match']['afdeling_id']) ? ERROR_NAME : '') ?>" name="afdeling_id">
 						<option value="0">Selecteer een afdeling</option>
 						<?php
 								$afdeling = $login->ReadData(['selectQuery' => 'SELECT `afdeling`.id, `afdeling`.afdeling_naam FROM `afdeling`']);
@@ -52,12 +52,12 @@
 
 		<div class="form-label">Email*</div>
 		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['email']) ? 'createError' : '') ?>" value="<?= (isset($_POST['email']) ? $_POST['email'] : '') ?>" type="text" name="email">
+				<input class="<?= (isset($error['match']['email']) ? ERROR_NAME : '') ?>" value="<?= (isset($_POST['email']) ? $_POST['email'] : '') ?>" type="text" name="email">
 		</div>
 
 		<div class="form-label">Wachtwoord*</div>
 		<div class="form-attribute">
-				<input class="<?= (isset($error['match']['wachtwoord']) ? 'createError' : '') ?>" value="<?= (isset($_POST['wachtwoord']) ? $_POST['wachtwoord'] : '') ?>" type="password" name="wachtwoord">
+				<input class="<?= (isset($error['match']['wachtwoord']) ? ERROR_NAME : '') ?>" value="<?= (isset($_POST['wachtwoord']) ? $_POST['wachtwoord'] : '') ?>" type="password" name="wachtwoord">
 		</div>
 
 		<input type="radio" name="status_id" value="1" checked>Maak gebruiker een administrator<br><br>
