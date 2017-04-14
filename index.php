@@ -10,13 +10,13 @@
 
 	switch($url[0]) {
 		case '':
-			include('/login/includes/login_function.php');
-			$page = '/login/login.php';
+			include('login/includes/login_function.php');
+			$page = 'login/login.php';
 		break;
 		case 'dashboard':
 			session_start();
-			include('/dashboards/includes/checkSession.php');
-			include('/controllers/dashboard_controller.php');
+			include('dashboards/includes/checkSession.php');
+			include('controllers/dashboard_controller.php');
 		break;
 		case 'logout':
 			$page = 'logout.php';

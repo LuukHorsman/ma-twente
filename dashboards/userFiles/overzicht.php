@@ -33,6 +33,7 @@
 				geslacht
 			ON
 				medewerkers.geslacht_id = geslacht.id
+			ORDER BY afdeling.id
 			']);
 	?>
 
