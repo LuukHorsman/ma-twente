@@ -5,7 +5,6 @@ if(!isset($url[2]))
 
 switch($url[2]) {
 	case '':
-		include('dashboards/user_includes/checkCreateForm.php');
 		$user_page = '/../userFiles/overzicht.php';
 	break;
 	case 'create':
@@ -15,6 +14,9 @@ switch($url[2]) {
 	case 'update':
 		include('dashboards/user_includes/checkCreateForm.php');
 		$user_page = '/../userFiles/updateUser.php';
+	break;
+	case 'delete':
+		$user_page = '/../userFiles/deleteUser.php';
 	break;
 	default:
 		$page = '404.php';

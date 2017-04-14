@@ -1,10 +1,10 @@
 <div>
 	<?php
 		$results = $login->ReadData(['selectQuery' => '
-			SELECT 
+			SELECT
 				gebruikersccount.id AS gebruikersaccount_id,
 				gebruikersccount.medewerkers_id,
-				gebruikersccount.status_id, 
+				gebruikersccount.status_id,
 				gebruikersccount.email,
 				medewerkers.id AS medewerkers_id,
 				medewerkers.afdeling_id,
@@ -43,6 +43,7 @@
 			<th>Afdeling</th>
 			<th>E-mail</th>
 			<th>Intern Telefoonnummer</th>
+			<th>Actions</th>
 		</tr>
 		<?php
 			foreach($results as $row) {
@@ -54,6 +55,8 @@
 				echo '<td>' . $row['afdeling_naam']  . '</td>';
 				echo '<td>' . $row['email']  . '</td>';
 				echo '<td>' . $row['inter_telefoonnummer']  . '</td>';
+				echo '<td>' . '<a href="/dashboard/user/update/' . $row['gebruikersaccount_id'] . '">update</a>' . '</td>';
+				echo '<td>' . '<a href="/dashboard/user/delete/' . $row['gebruikersaccount_id'] . '">delete</a>' . '</td>';
 				echo '</tr>';
 			}
 		?>
