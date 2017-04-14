@@ -1,7 +1,7 @@
 <div class="user-form">
 	<form method="post">
 
-		<h3>Nieuwe Medewerker Toevoegen</h3>
+		<h1>Nieuwe Medewerker Toevoegen</h1>
 
 		<div class="form-label">Geslacht</div>
 		<div class="form-attribute">
@@ -63,10 +63,10 @@
 		<input type="radio" name="status_id" value="1" checked>Maak gebruiker een administrator<br><br>
 		<input type="submit" name="subbutton" value="Gebruiker Toevoegen">
 	</form>
-
+	
 	<div class="error">
-		<?= (isset($error['match']['inter_telefoonnummer']) ? 'Het telefoonnummer mag alleen maar cijfers bevatten!<br>' : '') ?>
-		<?= (isset($error['match']['email']) ? 'Het E-mail adres is nog niet ingevuld, een voorbeeld zou kunnen zijn: example@domein.nl<br>' : '') ?>
-		<?= (isset($error['match']['afdeling_id']) ? 'U moet nog een afdeling kiezen!<br>' : '') ?>
+		<?= (isset($error['match']['inter_telefoonnummer']) ? '<p><i class="material-icons">&#xe000;</i> Het telefoonnummer mag alleen maar cijfers bevatten</p>' : '') ?>
+		<?= (isset($error['match']['email']) ? '<p><i class="material-icons">&#xe000;</i> Het e-mail adres is nog niet ingevuld, voorbeeld: example@domein.nl</p>' : '') ?>
+		<?= (isset($error['match']['afdeling_id']) ? '<p><i class="material-icons">&#xe000;</i> Geen afdeling gekozen</p>' : '') ?>
 	</div>
 </div>

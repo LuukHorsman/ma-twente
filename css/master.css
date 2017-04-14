@@ -13,7 +13,7 @@
 
 /* GLOBAL STYLES */
 		body { background-color: #f3f3f4; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
-		body, section, header, article, main, footer, form, input, a, div, h1 {
+		body, section, header, article, main, footer, form, input, a, p, div, h1 {
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
@@ -155,3 +155,76 @@
 		div.users table td.action a {margin-left: 4px;}
 		div.users table td.action a i {font-size: 17px; background: #1ab394; color: #FFF; padding: 2px; border-radius: 4px;}
 		div.users table td.action a i:hover {background: #1cc09f;}
+
+
+		/* USER FORMS */
+
+		div.user-form {
+				width: 90%;
+				min-width: 555px;
+				max-width: 750px;
+				margin: auto;
+				background-color: #FFF;
+				color: #676a6c;
+				border-top: 3px solid #1ab394;
+				border-radius: 5px;
+			 	margin-top: 10px;
+		}
+
+		div.user-form [class*="form-"] {
+        width: 50%;
+				float: left;
+				padding: 10px;
+    }
+
+		div.user-form h1 {padding: 10px; border-bottom: 1px solid #e7eaec;}
+
+		div.user-form input, select {
+				width: 100%;
+				border: 1px solid lightgray;
+				padding: 10px;
+				border-radius: 3px;
+		}
+
+		div.user-form input[type="radio"] {
+				width: 35px;
+		}
+
+		div.user-form input[type="submit"] {
+				background-color: #1ab394;
+				color: #fff;
+				border: none;
+				padding: 7px;
+				border-radius: 3px;
+				font-size: 90%;
+				font-weight: bold;
+				padding-right: 30px;
+				margin: 10px;
+				width: 47%;
+				left: 50%;
+		}
+
+		div.user-form div.error {
+				padding: 10px;
+		}
+
+		div.user-form div.error p {
+				color: #D8000C;
+				background-color: #FFBABA;
+				width: 100%;
+				padding: 10px;
+				border-left: 3px solid #D8000C;
+				border-radius: 3px;
+				margin: 0;
+				margin-top: 5px;
+				font-size: 90%;
+				padding-left: 30px;
+
+		}
+
+		div.user-form div.error p i {
+				position: absolute;
+				font-size: 17px;
+				left: 8px;
+				top: 11px;
+		}
