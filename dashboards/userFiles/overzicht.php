@@ -1,6 +1,4 @@
-<div class="users">
-	<h1>Gebruikerslijst</h1>
-	<a class="new_user_btn" href="">Nieuwe gebruiker<i class="material-icons">&#xe145;</i></a>
+<div>
 	<?php
 		$results = $login->ReadData(['selectQuery' => '
 			SELECT
@@ -38,7 +36,7 @@
 
 	<table>
 		<tr>
-			<th>Voorletter</th>
+			<th>Voornaam</th>
 			<th>Tussenvoegsel</th>
 			<th>Achternaam</th>
 			<th>Geslacht</th>
@@ -57,7 +55,8 @@
 				echo '<td>' . $row['afdeling_naam']  . '</td>';
 				echo '<td>' . $row['email']  . '</td>';
 				echo '<td>' . $row['inter_telefoonnummer']  . '</td>';
-				echo '<td class="action">' . '<a href="/dashboard/user/update/' . $row['gebruikersaccount_id'] . '"><i class="material-icons">&#xe3c9;</i></a>' . '<a href="/dashboard/user/delete/' . $row['gebruikersaccount_id'] . '"><i class="material-icons">&#xe872;</i></a>' . '</td>';
+				echo '<td>' . '<a href="/dashboard/user/update/' . $row['gebruikersaccount_id'] . '">update</a>' . '</td>';
+				echo '<td>' . '<a href="/dashboard/user/delete/' . $row['gebruikersaccount_id'] . '">delete</a>' . '</td>';
 				echo '</tr>';
 			}
 		?>

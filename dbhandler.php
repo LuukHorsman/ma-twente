@@ -11,7 +11,7 @@ class DbHandler {
 		$this->db_password = $password;
 		$this->db_server = $server;
 		$this->db_name = $db_name;
-		
+
 		try {
 		    $this->conn = new PDO("mysql:host=$this->db_server;dbname=$this->db_name", $this->db_username, $this->db_password);
 		    $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -26,7 +26,7 @@ class DbHandler {
 			$query = $this->conn->prepare($query);
 			$query->execute();
 			$last_id = $this->conn->lastInsertId();
-			return 'This is the id last added: ' . $last_id;	
+			return $last_id;	
 		} catch(PDOException $e) {
 			return $e;
 		}
@@ -35,11 +35,11 @@ class DbHandler {
 
 	public function ReadData($array) {
 		try {
-		
+
 			$select = $array['selectQuery'];
-			
+
 			$query = $this->conn->prepare($select);
-			
+
 			if(isset($array['bindParam'])) {
 				foreach($array['bindParam'] as $key => $value) {
 					$query->bindParam($key, $value);
@@ -66,10 +66,10 @@ class DbHandler {
 
 			$query->execute();
 			return $query->rowCount();
-			
+
 
 		} catch(PDOException $e) {
-			return $e;	
+			return $e;
 		}
 	}
 
