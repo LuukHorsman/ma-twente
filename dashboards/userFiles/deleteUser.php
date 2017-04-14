@@ -37,3 +37,7 @@
 		<?= (isset($error['match']['afdeling_id']) ? '<p><i class="material-icons">&#xe000;</i> Geen afdeling gekozen</p>' : '') ?>
 	</div>
 </div>
+
+<script>
+		document.getElementById("gebruikers").className += "active";
+</script>
