@@ -17,7 +17,6 @@
 			session_start();
 			include('/dashboards/includes/checkSession.php');
 			include('/controllers/dashboard_controller.php');
-
 		break;
 		case 'logout':
 			$page = 'logout.php';
