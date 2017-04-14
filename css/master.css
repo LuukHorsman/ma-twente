@@ -12,7 +12,7 @@
 */
 
 /* GLOBAL STYLES */
-		body { background-color: #f1f3f6; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
+		body { background-color: #f3f3f4; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
 		body, section, header, article, main, footer, form, input, a, div, h1 {
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
@@ -22,13 +22,6 @@
 				font-weight: normal;
 				position: relative;
 		}
-
-/*ERROR HANDLING*/
-.createError {
-	color:red;
-	border:solid red 1px;
-}
-
 
 /* MEDEWERKER LOGIN */
 		article.login {
@@ -117,3 +110,48 @@
 		section.dashboard nav li:hover {
 				background-color: #FFF;
 		}
+
+
+		/* USER OVERZICHT */
+
+		div.users {
+			width: 80%;
+			max-width: 1200px;
+			min-width: 400px;
+			margin: auto;
+			overflow-x: auto;
+			background: #FFF;
+			border-radius: 5px;
+			border-top: 3px solid #1ab394;
+			margin-top: 10px;
+	    color: #676a6c;
+		}
+		div.users h1 {border-bottom: 1px solid #e7eaec; padding: 10px; font-size: 120%;}
+		div.users a.new_user_btn {
+				background-color: #1ab394;
+				color: #fff;
+				padding: 7px;
+				border-radius: 3px;
+				text-decoration: none;
+				position: absolute;
+				top: 8px;
+				right: 60px;
+				font-size: 85%;
+				font-weight: bold;
+				padding-right: 30px;
+		}
+		div.users a.new_user_btn:hover {background: #1cc09f;}
+		div.users a.new_user_btn i {font-size: 15px; position: absolute; right: 9px; top: 8px;}
+
+		div.users table tr {border-top: 1px solid #e7eaec;}
+		div.users tr,th, td {text-align: left; padding: 10px; font-size: 93%;}
+		div.users table {
+				width: 100%;
+				margin: auto;
+				border-collapse: collapse;
+		}
+
+		div.users table td.action {width: 100px;}
+		div.users table td.action a {margin-left: 4px;}
+		div.users table td.action a i {font-size: 17px; background: #1ab394; color: #FFF; padding: 2px; border-radius: 4px;}
+		div.users table td.action a i:hover {background: #1cc09f;}
