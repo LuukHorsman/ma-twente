@@ -1,9 +1,18 @@
 <section class="dashboard">
-		<header>
-				<div>Ingelogd als <?= $_SESSION["voornaam"] . ". " . $_SESSION["achternaam"]; ?></div>
-				<div><a href="/logout">Logout</a></div>
-		</header>
+		<section class="content">
 		<nav>
-				Navigatie
+				<header>
+						Ingelogd als<br>
+						<b><?=$_SESSION["achternaam"]?></b>
+				</header>
+				<ul>
+						<a href="/dashboard/"><li id="dashboard">Dashboard</li></a>
+						<a href="/dashboard/user"><li id="gebruikers">Gebruikers</li></a>
+				</ul>
 		</nav>
+		<main>
+				<header><a href="/uitloggen">Uitloggen</a></header>
+				<?php include($user_page); ?>
+		</main>
+		</section>
 </section>

@@ -76,7 +76,7 @@
 		section.content nav header b {color: #DFE4ED;}
 
 		section.content nav ul {margin: 0; padding: 0; width: 100%;}
-
+		section.content nav a {text-decoration: none;}
 		section.content ul li {
 				list-style-type: none;
 				padding: 0;
