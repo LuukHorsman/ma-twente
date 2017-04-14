@@ -8,10 +8,13 @@ switch($url[2]) {
 		$user_page = '/../userFiles/overzicht.php';
 	break;
 	case 'create':
+		include('dashboards/user_includes/checkMainForm.php');
 		include('dashboards/user_includes/checkCreateForm.php');
 		$user_page = '/../userFiles/createUser.php';
 	break;
 	case 'update':
+		include('dashboards/user_includes/checkMainForm.php');
+		include('dashboards/user_includes/checkUpdateForm.php');
 		$user_page = '/../userFiles/updateUser.php';
 	break;
 	case 'delete':
