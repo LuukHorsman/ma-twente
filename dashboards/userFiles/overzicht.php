@@ -1,6 +1,6 @@
 <div class="users">
 	<h1>Gebruikerslijst</h1>
-	<a class="new_user_btn" href="">Nieuwe gebruiker<i class="material-icons">&#xe145;</i></a>
+	<a class="new_user_btn" href="/dashboard/user/create">Nieuwe gebruiker<i class="material-icons">&#xe145;</i></a>
 	<?php
 		$results = $login->ReadData(['selectQuery' => '
 			SELECT

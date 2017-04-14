@@ -37,16 +37,10 @@ $results = $login->ReadData(['selectQuery' => '
     medewerkers.geslacht_id = geslacht.id
   WHERE gebruikersccount.id = ' . $url[3] . '
   ']);
-echo '<pre>';
-  print_r($results);
-echo '</pre>';
 
 if(is_array($results) && empty($results)) {
   die('User does not exist');
 }
-
-print_r($error);
-
 
 if(isset($_POST) && !empty($_POST) && is_array($error) && empty($error)) {
   $query = 'UPDATE gebruikersccount SET
