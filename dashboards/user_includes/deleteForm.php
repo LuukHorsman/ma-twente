@@ -39,5 +39,9 @@ $results = $login->ReadData(['selectQuery' => '
   ']);
 
   if(isset($_POST['deleteButton'])) {
-
+    $query = 'DELETE FROM gebruikersccount WHERE id = ' . $url[3];
+    $secondQuery = 'DELETE FROM medewerkers WHERE id = ' . $results[0]['medewerkers_id'];
+    $login->DeleteData($query);
+    $login->DeleteData($secondQuery);
+    header('location: /dashboard/user');
   }
