@@ -63,3 +63,7 @@
 		?>
 	</table>
 </div>
+
+<script>
+		document.getElementById("gebruikers").className += "active";
+</script>

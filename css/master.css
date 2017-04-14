@@ -13,7 +13,7 @@
 
 /* GLOBAL STYLES */
 		body { background-color: #f3f3f4; margin: 0; font-family: 'Merriweather Sans', sans-serif;}
-		body, section, header, article, main, footer, form, input, a, p, div, h1 {
+		body, section, header, article, main, footer, nav, form, input, a, p, div, h1 {
 				-webkit-box-sizing: border-box;
 				-moz-box-sizing: border-box;
 				box-sizing: border-box;
@@ -34,7 +34,7 @@
 				margin-top: 10%;
 				padding: 10px;
 				color: #747474;
-				border-top: 4px solid #00999D;
+				border-top: 4px solid #1ab394;
 		}
 
 		article.login form input {
@@ -43,7 +43,7 @@
 				padding: 10px;
 				border-radius: 3px;
 				border: none;
-				background-color: #e3e3da;
+				background-color: #ebebeb;
 		}
 
 		article.login form input[type="submit"] {
@@ -52,65 +52,90 @@
 				text-transform: uppercase;
 				font-weight: bold;
 				color: #FFF;
-				background-color: #00999D;
+				background-color: #1ab394;
 		}
 
 		article.login footer {height: 20px; margin-top: 10px;}
 
 /* MEDEWERKER DASHBOARD */
 
-		section.dashboard header {width: 100%; position: fixed; background: #FFF; border-bottom: 1px solid #eaeaea;  z-index: 9999;}
-		section.dashboard header div.nav-trigger {
-				background: #f7f9fa;
-				padding: 10px;
-				border-right: 1px solid #eaeaea;
-				float: left;
-				padding-left: 12px;
-		    padding-right: 12px;
-				color: #34495e;
-				text-align: center;
-		}
-		section.dashboard header div.nav-trigger:hover {
-				cursor: pointer;
-				background-color: #f2f5f7;
+		section.content {
+				display: flex;
 		}
 
-		section.dashboard nav {
-				background: #fff;
-				width: 70%;
-				position: fixed;
-				top: 49px;
-				border-right: 1px solid #eaeaea;
-				height: 100%;
-				min-width: 225px;
-				max-width: 270px;
-
+		section.content nav {
+				flex: 1;
+				background: red;
+				height: 100vh;
+				min-width: 230px;
+				background-color: #2f4050;
 		}
 
-		section.dashboard nav a {
-				text-decoration: none;
-				font-size: 13.5px;
-				font-weight: bold;
-				color: #6a6c6f;
-				font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-		}
 
-		section.dashboard nav ul {
+		section.content nav header {font-size: 90%; color: #8095a8; padding: 10px;}
+		section.content nav header b {color: #DFE4ED;}
+
+		section.content nav ul {margin: 0; padding: 0; width: 100%;}
+
+		section.content ul li {
 				list-style-type: none;
-				margin: 0;
 				padding: 0;
+				margin: 0;
 		}
 
-		section.dashboard nav li {
-				padding: 15px;
-				border-bottom: 1px solid #eaeaea;
-				background-color: #F7F9FA;
+		section.content li {
+				padding: 10px !important;
+				padding-top: 15px !important;
+				padding-bottom: 15px !important;
+				color: #a7b1c2;
+				font-size: 90%;
+				padding-left: 35px !important;
+				position: relative;
 		}
 
-		section.dashboard nav li:hover {
-				background-color: #FFF;
+		section.content li i {
+				position: absolute;
+				top: 14px;
+				left: 10px;
+				font-size: 19px;
+		}
+		section.content li:hover {
+				background: #293846;
+				color: #FFF;
+				cursor: pointer;
 		}
 
+		section.content li.active {
+			border-left: 4px solid #1ab394;
+			background: #293846;
+			color: #FFF;
+		}
+
+
+
+		section.content main {
+				flex: 6;
+		}
+
+		section.content main header {
+				background: #FFF;
+				border-bottom: 1px solid #e7eaec !important;
+				padding-top: 55px;
+				position: relative;
+		}
+
+		section.content main header a {
+				color: #333 !important;
+				text-decoration: none;
+				position: absolute;
+				right: 5%;
+				top: 25%;
+				font-size: 90%;
+		}
+
+		section.content main header a:hover {
+				text-decoration: underline;
+		}
 
 		/* USER OVERZICHT */
 
