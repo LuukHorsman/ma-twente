@@ -63,10 +63,14 @@
 		<input type="radio" name="status_id" value="1" checked>Maak gebruiker een administrator<br><br>
 		<input type="submit" name="subbutton" value="Gebruiker Toevoegen">
 	</form>
-	
+
 	<div class="error">
 		<?= (isset($error['match']['inter_telefoonnummer']) ? '<p><i class="material-icons">&#xe000;</i> Het telefoonnummer mag alleen maar cijfers bevatten</p>' : '') ?>
 		<?= (isset($error['match']['email']) ? '<p><i class="material-icons">&#xe000;</i> Het e-mail adres is nog niet ingevuld, voorbeeld: example@domein.nl</p>' : '') ?>
 		<?= (isset($error['match']['afdeling_id']) ? '<p><i class="material-icons">&#xe000;</i> Geen afdeling gekozen</p>' : '') ?>
 	</div>
 </div>
+
+<script>
+		document.getElementById("gebruikers").className += "active";
+</script>
